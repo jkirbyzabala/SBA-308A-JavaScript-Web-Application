@@ -1,12 +1,9 @@
 const API_KEY = 'live_ScVa6TSDTTaW3q6KBfplDptavAgFejACgvcjjE3WXHbXtJZzC5fMDAvtBIeAv9w1';
 
-export { API_KEY };
-
-//Requirement #1//
 // Function to fetch random cat image
 const fetchRandomCatImage = async () => {
     try {
-        // Send a GET request to the API endpoint
+        // Send a GET request to the API endpoint with API key
         const response = await fetch('https://api.thecatapi.com/v1/images/search', {
             headers: {
                 'x-api-key': API_KEY,
@@ -25,6 +22,7 @@ const fetchRandomCatImage = async () => {
     }
 };
 
+export { fetchRandomCatImage };
 //Requirement #2// Requirement #4
 // Function to display cat image on the page
 const displayCatImage = async () => {
