@@ -1,7 +1,76 @@
-.image-container {
+body {
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Lucideo', bold; 
+    font-size: 3rem; /* Adjust the font size */
+    text-transform: uppercase; /* Apply text transform */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    animation: wave 1s infinite alternate; /* Apply wave animation */
+    color: aliceblue
+}
+
+
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(10px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+p {
+    font-family: 'Lucideo'; /* Change font family to Pacifico */
+    font-size: 2rem
+}
+#catImageContainer {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container {
+    max-width: 700px; /* Limit the width of the image container */
+    border: 5px solid #ff0066; /* Add a fancy border */
+    border-radius: 20px; /* Add border radius for a rounded look */
+    overflow: hidden; /* Ensure the image stays within the container */
+} text-align: center;
+
+.image-container img {
+    max-width: 100%; /* Ensure the image stays within the container */
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
 }
 
 #imageAttributes {
     margin-top: 10px;
+}
+
+button {
+    margin: 10px;
+}
+
+#randomImageButton {
+    order: 1; /* Push to the left */
+}
+
+#saveFavoriteButton {
+    order: 3; /* Push to the right */
 }
