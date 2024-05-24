@@ -27,3 +27,34 @@ fetchArtworks()
     .catch(error => {
         console.error('Error:', error);
     });
+
+// STEP 2 // 
+    // Function to search for artworks by title or artist
+const searchArtworks = async (query) => {
+    try {
+        // Construct the API endpoint URL with the search query
+        const searchUrl = `${apiUrl}?q=${encodeURIComponent(query)}`;
+        
+        // Send a GET request to the API endpoint with the search query
+        const response = await fetch(searchUrl);
+        
+        // Parse the JSON response
+        const data = await response.json();
+        
+        // Return the search results
+        return data;
+    } catch (error) {
+        // Handle any errors
+        console.error('Error searching for artworks:', error);
+        throw error; // Rethrow the error to be caught by the caller
+    }
+};
+
+// Example usage: Search for artworks with title or artist containing "Vermeer"
+searchArtworks('Vermeer')
+    .then(searchResults => {
+        console.log('Search Results:', searchResults);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });

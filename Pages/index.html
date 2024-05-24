@@ -7,18 +7,21 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title id="title">TEST</title>
+        <title id="title">Art Institute of Chicago</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../CSS/styles.css">
     </head>
     <body>
-        <h1>Hello There</h1>
-        <h2>Welcome to the Athletic Shoe Gallery</h2>
-    <p>Use the search feature to find your favorite athletic shoes.</p>
-    <input type="text" id="search-input" placeholder="Search for shoes...">
-    <button id="search-button">Search</button>
-    <div id="gallery"></div>
+        <h1>Artwork Search</h1>
+        <!-- Search Form -->
+        <form id="searchForm">
+            <label for="searchInput">Search by Title or Artist:</label>
+            <input type="text" id="searchInput" name="searchInput">
+            <button type="submit">Search</button>
+        </form>
+        <!-- Display Search Results -->
+        <div id="searchResults"></div>
         <script type ="module" src="../JS/script.js" async defer></script>
 
     </body>
